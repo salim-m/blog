@@ -1,0 +1,11 @@
+baseURL = 'https://salimmajzoub.dev/'
+languageCode = 'en-us'
+title = 'Salim Majzoub'
+theme = 'paper'
+[params]
+    description = 'Documenting my journey through the stack... and the mess'
+
+    # socials
+    twitter = 'salim_majzoub'
+    github = 'salim-m'
+    linkedin = 'salim-majzoub'
