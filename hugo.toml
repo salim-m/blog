@@ -2,6 +2,9 @@ baseURL = 'https://salimmajzoub.dev/'
 languageCode = 'en-us'
 title = 'Salim Majzoub'
 theme = 'paper'
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
 [params]
     description = 'Documenting my journey through the stack... and the mess'
 
