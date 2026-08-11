@@ -6,10 +6,10 @@ theme = 'paper'
   [caches.images]
     dir = ':cacheDir/images'
 [params]
-    description = 'Software Engineer at Cosmopoints | 1x AWS'
+    description = 'Senior Software Engineer at Cosmopoints | 1x AWS'
     name = 'Salim AlMajzoub'
     author = 'Salim AlMajzoub'
-    bio = 'Software Engineer at Cosmopoints | 1x AWS'
+    bio = 'Senior Software Engineer at Cosmopoints | 1x AWS'
     avatar = 'https://github.com/salim-m.png'
     favicon = 'favicon.svg'
 
