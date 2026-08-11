@@ -1,12 +1,17 @@
 baseURL = 'https://salimmajzoub.dev/'
 languageCode = 'en-us'
-title = 'Salim Majzoub'
+title = "Salim's Blog"
 theme = 'paper'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
 [params]
-    description = 'Documenting my journey through the stack... and the mess'
+    description = 'Software Engineer at Cosmopoints | 1x AWS'
+    name = 'Salim AlMajzoub'
+    author = 'Salim AlMajzoub'
+    bio = 'Software Engineer at Cosmopoints | 1x AWS'
+    avatar = 'https://github.com/salim-m.png'
+    favicon = 'favicon.svg'
 
     # socials
     twitter = 'salim_majzoub'
