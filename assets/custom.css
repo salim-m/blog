@@ -134,7 +134,18 @@ html.dark .ai-notice {
    pseudo-element for the former. Set body's real background-color too, so
    the fallback reports the right color either way. !important for the same
    reason as .ai-notice above: `.bg-\(--bg\)` has ID-level specificity from
-   the theme's `:not(#\#)` reset chain. */
+   the theme's `:not(#\#)` reset chain.
+
+   The theme's ::before overlay still paints on top of body's own
+   background (per stacking rules, negative z-index descendants paint above
+   their container's own background), so leaving it in place would stack
+   two rgba(0,0,0,.85) layers and composite to near-black. Make body's own
+   background-color the only source of the color and neutralize the
+   overlay so the visible result is unchanged. */
 html.dark body {
   background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+html.dark body::before {
+  background-color: transparent !important;
 }
