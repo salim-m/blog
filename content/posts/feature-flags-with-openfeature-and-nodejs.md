@@ -26,7 +26,7 @@ Here's how to get started with OpenFeature.
 #### Installation
 
 ```bash
-npm install --save @openfeature/server-sdk @openfeature/config-cat-provider @configcat/sdk
+npm install --save @openfeature/server-sdk @openfeature/config-cat-provider
 ```
 
 #### Usage
@@ -54,4 +54,4 @@ A quick walkthrough of what's happening:
 - **`OpenFeature.setProviderAndWait`** registers the provider globally and waits until it's fully initialized before continuing, so your first flag evaluation doesn't run against stale or missing data.
 - **`getBooleanValue("isSignUpEnabled", false)`** evaluates the `isSignUpEnabled` flag and returns its current boolean value. The second argument, `false`, is the default value returned if the flag can't be evaluated (for example, if the provider fails to connect).
 
-From here, you can toggle `isSignUpEnabled` from your ConfigCat dashboard at any time without redeploying your app. To go further, check out the [OpenFeature docs](https://openfeature.dev/docs/) for other providers, or explore boolean, string, number, and object flag types beyond the basic example above.
+From here, you can toggle `isSignUpEnabled` from your ConfigCat dashboard at any time without redeploying your app. To go further, check out the [OpenFeature docs](https://openfeature.dev/docs/reference/intro) for other providers, or explore boolean, string, number, and object flag types beyond the basic example above.
