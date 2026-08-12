@@ -124,3 +124,17 @@ html.dark .theme-toggle:hover .icon-moon {
 html.dark .ai-notice {
   background-color: rgba(255, 255, 255, 0.08);
 }
+
+/* Dark mode is otherwise implemented as a `body::before` overlay layered
+   behind the content (see the theme's compiled CSS), so body's own
+   background-color stays the light value even when dark mode is active.
+   iOS Safari colors its chrome (status bar / home-indicator area) either by
+   sampling a fixed/sticky element pinned to that edge, or by falling back
+   to body's actual background-color -- and it's not guaranteed to see a
+   pseudo-element for the former. Set body's real background-color too, so
+   the fallback reports the right color either way. !important for the same
+   reason as .ai-notice above: `.bg-\(--bg\)` has ID-level specificity from
+   the theme's `:not(#\#)` reset chain. */
+html.dark body {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+}
