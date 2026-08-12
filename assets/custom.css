@@ -103,3 +103,20 @@ html.dark .theme-toggle:hover .icon-moon {
 .back-link:hover {
   opacity: 1;
 }
+
+/* AI-usage notice at the bottom of each post. Plain CSS (see file header
+   note) rather than Tailwind utilities, so padding/line-height aren't
+   limited to values the theme happened to pre-compile. */
+.ai-notice {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  font-size: 0.8rem;
+  line-height: 1.7;
+  opacity: 0.7;
+}
+
+html.dark .ai-notice {
+  background-color: rgba(255, 255, 255, 0.08);
+}

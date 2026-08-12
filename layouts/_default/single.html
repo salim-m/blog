@@ -37,6 +37,15 @@
   </footer>
   {{- end -}}
 
+  <!-- AI usage notice -->
+  {{- if ne .Type "page" -}}
+  <div class="ai-notice">
+    AI is used selectively in this post &mdash; to refine phrasing, check
+    code, or tighten explanations. It never writes the article from scratch;
+    the ideas, structure, and opinions are mine.
+  </div>
+  {{- end -}}
+
   <!-- Post Nav -->
   {{- if not site.Params.disablePostNavigation -}}<!---->
   {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}<!---->
