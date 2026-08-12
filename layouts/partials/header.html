@@ -86,10 +86,11 @@
     });
 
     // dark theme
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const metaThemes = document.querySelectorAll('meta[name="theme-color"]');
     const lightBg = '{{- $bg_color -}}'.replace(/"/g, '');
     const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? "rgb(0 0 0 / 85%)" : lightBg);
+      const color = isDark ? "rgb(0 0 0 / 85%)" : lightBg;
+      metaThemes.forEach((meta) => meta.setAttribute('content', color));
       htmlClass[isDark ? 'add' : 'remove']('dark');
       localStorage.setItem('dark', isDark);
     };
