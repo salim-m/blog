@@ -106,10 +106,14 @@ html.dark .theme-toggle:hover .icon-moon {
 
 /* AI-usage notice at the bottom of each post. Plain CSS (see file header
    note) rather than Tailwind utilities, so padding/line-height aren't
-   limited to values the theme happened to pre-compile. */
+   limited to values the theme happened to pre-compile. margin/padding need
+   !important for the same reason as .back-link above: the theme's compiled
+   main.css resets both via `*:not(#\#):not(#\#){margin:0;padding:0}`, and
+   that doubled :not(#\#) gives the reset ID-level specificity that a plain
+   class selector can never outrank. */
 .ai-notice {
-  margin-top: 2rem;
-  padding: 1.25rem 1.5rem;
+  margin-top: 2rem !important;
+  padding: 1.25rem 1.5rem !important;
   border-radius: 0.5rem;
   background-color: rgba(0, 0, 0, 0.03);
   font-size: 0.8rem;
